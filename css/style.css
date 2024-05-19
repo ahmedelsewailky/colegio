@@ -199,7 +199,6 @@ p {
 .header {
     background: url("../images/squares.png") var(--main-color);
     color: white;
-    z-index: 1;
     position: relative;
 }
 
@@ -253,7 +252,6 @@ p {
 
 .waves img {
     margin-top: -125px;
-    z-index: 1;
     position: relative;
 }
 
