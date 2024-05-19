@@ -456,6 +456,10 @@ h3.feature-title.h5 {
 }
 
 /*  ====================================================================    Our Categories Section */
+.category-section {
+    padding-bottom: 10rem;
+}
+
 .category-item {
     text-align: center;
     position: relative;
@@ -510,4 +514,8 @@ h3.feature-title.h5 {
     top: 0;
     right: 0;
     display: flex;
+}
+
+.category-section + .waves {
+    margin-top: -5rem;
 }
