@@ -18,6 +18,9 @@ $(function () {
     $(".slick").slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        arrows: true,
+        prevArrow: $(".prev-arrow"),
+        nextArrow: $(".next-arrow"),
     });
 });
