@@ -15,12 +15,18 @@ $(function () {
 
     new WOW().init();
 
-    $(".slick").slick({
+    $(".category-slick").slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         arrows: true,
         prevArrow: $(".prev-arrow"),
         nextArrow: $(".next-arrow"),
+    });
+
+    $(".testi-slick").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     });
 });

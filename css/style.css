@@ -489,7 +489,7 @@ h3.feature-title.h5 {
     font-size: 13px;
 }
 
-.slick-arrow {
+.category-section .slick-arrow {
     background-color: white;
     width: 3rem;
     height: 3rem;
@@ -502,7 +502,7 @@ h3.feature-title.h5 {
     cursor: pointer;
 }
 
-.slick-arrow:hover {
+.category-section .slick-arrow:hover {
     border-color: transparent;
     box-shadow: 1px 3px 4px rgb(0, 0, 0, 0.1);
 }
@@ -580,7 +580,13 @@ h3.feature-title.h5 {
     color: #FF9800;
 }
 
-h3.testi-name.h4 {
+.testi-name.h4 {
     font-size: 21px;
     margin: 0;
+}
+
+.testi-slick .slick-slide {
+    display: flex;
+    padding-bottom: 1rem;
+    padding: 2rem 3rem;
 }
