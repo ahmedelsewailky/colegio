@@ -2,6 +2,7 @@
     --main-color: #0EA5E9;
     --second-color: #F59E0B;
     --dark-color: #1E293B;
+    --bg-light: #F1F5F9;
 
     --main-rgb-color: 14, 165, 233;
     --second-rgb-color: 245, 158, 11;
@@ -250,15 +251,13 @@ p {
     transform: scale(1);
 }
 
-.waves img {
-    margin-top: -125px;
-    position: relative;
+.waves {
+    background-color: red;
 }
 
 /*  ====================================================================    Global Section Style */
 .section {
-    margin: 5rem 0;
-    padding: 3rem 0;
+    padding: 5rem 0;
 }
 
 .section-title {
@@ -475,11 +474,13 @@ h3.feature-title.h5 {
 
 .category-item .category-content {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     right: 10px;
-    background-color: white;
     padding: 1rem;
-}
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 3px 5px;
+}   
 
 .category-item .category-title {
     font-size: 21px;
@@ -507,17 +508,39 @@ h3.feature-title.h5 {
     box-shadow: 1px 3px 4px rgb(0, 0, 0, 0.1);
 }
 
-.slick-section .arrows {
+.category-section .arrows {
     position: absolute;
     top: 0;
     right: 0;
     display: flex;
 }
 
-.category-section+.waves {
-    margin-top: -5rem;
+/* Bg Colors For Category Content Box */
+.yellowgreen {
+    background-color: yellowgreen;
 }
 
+.blueviolet {
+    background-color: rgb(164, 97, 228);
+}
+
+.green {
+    background-color: green;
+}
+
+.skyblue {
+    background-color: skyblue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+/*  ====================================================================    Features Section */
 .feature-item {
     display: flex;
     margin-bottom: 2rem;
@@ -543,6 +566,7 @@ h3.feature-title.h5 {
     border-radius: 100%;
 }
 
+/*  ====================================================================    Testimonails Section */
 .section-testimonails {
     background-color: var(--main-color);
     color: white;
@@ -589,4 +613,70 @@ h3.feature-title.h5 {
     display: flex;
     padding-bottom: 1rem;
     padding: 2rem 3rem;
+}
+
+.testimonails-section {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.testimonails-section span.pre-section-shape:after {
+    background-color: #CDDC39;
+}
+
+/*  ====================================================================    Apply For Adimission Section */
+.application-section {
+    background: var(--bg-light) url("../img/bg/bg-con-1-1.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+.application-section form {
+    border: 2px solid;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: white;
+}
+
+.application-section form .form-control {
+    line-height: 40px;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    font-size: 15px;
+}
+
+.application-section form .form-label .required {
+    color: #ff6969;
+    font-size: 14px;
+    margin-left: 0.5rem;
+}
+
+.form-check-input {
+    border-radius: 0 !important;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: .5rem;
+}
+
+.form-check-input:focus,
+.form-control:focus {
+    border-color: #000000;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgb(0 0 0 / 31%);
+}
+
+.form-check-input:checked {
+    background-color: #000000;
+    border-color: #ffc107;
+}
+
+.img-box img {
+    border-radius: 1.5rem;
+    border: 6px solid white;
+}
+
+.img-box img:nth-child(1) {
+    transform: rotate(-15deg) translateY(40px);
+    box-shadow: 1px 4px 20px rgb(0, 0, 0, 0.25);
 }
