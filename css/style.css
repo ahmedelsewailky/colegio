@@ -80,6 +80,7 @@ p {
 .bg-light {
     background-color: var(--bg-light);
 }
+
 /*  ====================================================================    Navbar */
 .navbar {
     background: url("../images/squares.png") var(--main-color);
@@ -254,8 +255,11 @@ p {
     transform: scale(1);
 }
 
-.waves {
-    background-color: red;
+.header+.waves {
+    background-color: transparent;
+    margin-top: -120px;
+    z-index: 9;
+    position: relative;
 }
 
 /*  ====================================================================    Global Section Style */
@@ -809,4 +813,30 @@ h3.feature-title.h5 {
     vertical-align: 3px;
     transform: rotate(15deg);
     color: var(--main-color);
+}
+
+.back-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: var(--second-color);
+    border: 2px solid;
+    color: #000;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transition: transform 0.5s ease, background 0.2s ease;
+    cursor: pointer;
+    transform: translateY(-2000%);
+    z-index: 9;
+}
+
+.back-to-top.show {
+    transform: translateY(10px);
+}
+
+.back-to-top:hover {
+    background-color: white;
 }
