@@ -29,4 +29,10 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
+
+    $(".insta-slick").slick({
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+    });
 });

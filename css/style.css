@@ -77,6 +77,9 @@ p {
     box-shadow: none;
 }
 
+.bg-light {
+    background-color: var(--bg-light);
+}
 /*  ====================================================================    Navbar */
 .navbar {
     background: url("../images/squares.png") var(--main-color);
@@ -480,7 +483,7 @@ h3.feature-title.h5 {
     border: 2px solid;
     border-radius: 10px;
     box-shadow: 3px 5px;
-}   
+}
 
 .category-item .category-title {
     font-size: 21px;
@@ -679,4 +682,131 @@ h3.feature-title.h5 {
 .img-box img:nth-child(1) {
     transform: rotate(-15deg) translateY(40px);
     box-shadow: 1px 4px 20px rgb(0, 0, 0, 0.25);
+}
+
+
+/*  ====================================================================    Instagram Section */
+.insta-item img {
+    transition: 0.5s ease-in-out;
+}
+
+.insta-item {
+    position: relative;
+    overflow: hidden;
+    width: 140px !important;
+    height: 140px;
+    margin: 0 .63rem;
+    border-radius: 1.5rem;
+}
+
+.insta-item:hover img {
+    transform: scale(1.2);
+}
+
+.insta-item:before,
+.insta-item:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 0;
+    z-index: 1;
+    transition: 0.5s ease;
+    background-color: rgba(var(--main-rgb-color), 0.5);
+
+}
+
+.insta-item:before {
+    top: 0;
+    left: 0;
+}
+
+.insta-item:after {
+    bottom: 0;
+    right: 0;
+}
+
+.insta-item:hover:after,
+.insta-item:hover:before {
+    height: 100% !important;
+}
+
+.insta-item a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    transition: 0.4s ease;
+}
+
+.insta-item:hover a {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/*  ====================================================================    Footer Section */
+.footer-top {
+    padding-top: 3rem;
+}
+
+.footer-middle {
+    padding: 1rem 0 3rem;
+}
+
+.footer-top h2 {
+    text-align: center;
+}
+
+.footer-top form {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.footer-top form input {
+    height: 5rem;
+    border-radius: 100px;
+    padding: 0 2rem;
+}
+
+.footer-top form button {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    box-shadow: none;
+}
+
+.footer-middle p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.footer-middle h6 {
+    font-size: 19px;
+    font-family: cursive;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-middle .nav-link {
+    color: inherit;
+    position: relative;
+}
+
+.footer-middle .nav-link:before {
+    content: '✔';
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 10px;
+    vertical-align: 3px;
+    transform: rotate(15deg);
+    color: var(--main-color);
 }
