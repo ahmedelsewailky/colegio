@@ -105,6 +105,7 @@ p {
     border: 2px solid;
     width: 230px;
     padding: 0;
+    position: relative;
 }
 
 .dropdown-item {
@@ -125,9 +126,39 @@ p {
 }
 
 .dropdown-item:hover {
-    background-color: rgb(var(--main-rgb-color), 0.15);
-    color: var(--main-color);
+    background-color: rgb(239 239 239 / 50%);
+    color: #000000;
     padding-left: 1.5rem;
+}
+
+
+@media (min-width: 992px) {
+    .dropdown-toggle {
+        pointer-events: none;
+    }
+
+    .dropdown-menu {
+        display: block;
+        transform: translateY(20px);
+        transition: 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .dropdown-menu:before {
+        content: '';
+        position: absolute;
+        border: 7px solid;
+        border-color: transparent transparent black;
+        top: -15px;
+        left: 10px;
+    }
+
+    li.nav-item.dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 992px) {
@@ -202,9 +233,42 @@ p {
 
 /*  ====================================================================    Header */
 .header {
-    background: url("../images/squares.png") var(--main-color);
+    background: url("../img/png/squares.png") var(--main-color);
     color: white;
     position: relative;
+    overflow: hidden;
+    height: 600px;
+    z-index: 1;
+}
+
+.header-right-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@media (min-width:992px) {
+    .header-right-image {
+        top: 0;
+        right: auto;
+    }
+}
+
+.left-header-content {
+    margin: 50px 0;
+}
+
+img.image-wave {
+    position: absolute;
+    bottom: 0;
+}
+
+.waves-shap {
+    position: absolute;
+    bottom: -90px;
+    width: 100%;
+    left: 0;
 }
 
 .header h2 {
@@ -806,7 +870,7 @@ h3.feature-title.h5 {
 }
 
 .footer-middle .nav-link:before {
-    content: '✔';
+    content: 'âœ”';
     display: inline-block;
     margin-right: 0.5rem;
     font-size: 10px;
@@ -839,4 +903,157 @@ h3.feature-title.h5 {
 
 .back-to-top:hover {
     background-color: white;
+}
+
+
+/*  ====================================================================    Program Details Page */
+header .navbar {
+    background-color: white;
+    padding: 0;
+}
+
+header .navbar-inner {
+    border: none;
+    box-shadow: none;
+}
+
+header .navbar-inner .btn {
+    border-radius: 0;
+}
+
+header .topbar {
+    background-color: var(--main-color);
+    color: white;
+}
+
+header .topbar .nav-link {
+    color: inherit;
+}
+
+.breadcrumb-area {
+    background: url("./../img/banner/breadcrumb-bg.jpg");
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 120px 0;
+}
+
+.breadcrumb-area .title {
+    font-size: 49px;
+    color: white;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.breadcrumb-area:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0000009c, transparent);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.right-program-details {
+    border: 2px solid;
+    padding: 3rem;
+    box-shadow: 10px 5px;
+}
+
+.right-program-details h5.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.right-program-details p.desc {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.right-program-details .single-include {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    border-bottom: 1px solid;
+    padding-bottom: 2rem;
+}
+
+.right-program-details .single-include .right {
+    color: var(--second-color);
+    font-weight: 500;
+}
+
+.right-program-details .btn-area {
+    background-color: var(--second-color);
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid;
+    font-weight: 600;
+    box-shadow: 2px 4px;
+}
+
+.right-program-details .btn-area:hover {
+    border-color: transparent;
+}
+
+thead th {
+    background-color: whitesmoke !important;
+    padding: 1rem;
+    font-weight: 400;
+    border: 2px solid white;
+    text-align: center;
+}
+
+tr td.one {
+    background-color: whitesmoke;
+    padding: 2rem;
+    /* border: 2px solid white; */
+}
+
+td.bg-nine {
+    background-color: thistle;
+}
+
+td.bg-one {
+    background-color: steelblue;
+    color: white;
+}
+
+td.bg-four {
+    background-color: burlywood;
+    color: white;
+}
+
+td.bg-three {
+    background-color: darkseagreen;
+    color: white;
+}
+
+td.bg-two {
+    background-color: coral;
+    color: white;
+}
+
+td[class^="bg"] {
+    text-align: center;
+    padding: 2rem;
+}
+
+td[class^="bg"] p:nth-child(1) {
+    font-weight: 600;
+}
+
+td[class^="bg"] p:nth-child(2) {
+    font-size: 13px;
+}
+
+tbody td {
+    border: 3px solid white;
+    padding: 2rem;
+}
+
+table.table-responsive {
+    width: 100%;
 }

@@ -8,6 +8,11 @@ Colegio is a free bootstrap template for school business.
 Its design is being finalized
 
 
+### Completed Pages:
+- Index.html
+- Product-Details.html
+
+
 ### Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/ahmedelsewailky/colegio/master/img/screenshot.png)
